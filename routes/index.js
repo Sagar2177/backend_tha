@@ -4,6 +4,8 @@ var registerInitialCheck=require('../middlewares/registerChecks')
 var register=require('../controllers/register')
 /* GET home page. */
 router.get('/', function(req, res, next) {
+  const sess=req.session;
+  sess.username='pintu';
   res.render('index', { title: 'Express' });
 });
 
